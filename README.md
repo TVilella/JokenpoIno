@@ -24,12 +24,15 @@ Olá Mundo!!
 
 Minha primeira vez no github!! Eu usarei isso para fazer um Jokenpo-Ino usando Arduino para introduzir meu sobrinho neste mundo mágico!
 
-Lista de Materiasi
+Lista de Materias
 - 1 Arduino Uno (Compatível)
 - 1 display OLED IIC/I2C com processador SSD1306
 - 3 Push Button (Botões que em portugues também chamamos push button)
 - 1 Protoboard pequena
 - Pacote com 30 Jumper para protoboard
 - Cabo USB tipo A - B (Aquele da impressora)
+
+**Curso indicado para fazer do zero projetos como esse que será ensinado para meu sobrinho**
+#[Curso De Arduino](https://go.hotmart.com/W8213658G)
 
 Por enquanto isso é tudo pessoal!
