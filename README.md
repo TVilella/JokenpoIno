@@ -8,7 +8,7 @@ My first time at github!! I'll use this to make one Jokepo-Ino using Arduino for
 BOM ( Bill Of Material )
 - 1 Arduino Uno (compatible)
 - 1 display OLED IIC/I2C with processor SSD1306 
-- 3 Push Button
+- 4 Push Button
 - 1 Small Breadboard
 - Pack 30 Jumper/Wires for breadboard
 - Cable USB A-B
@@ -27,7 +27,7 @@ Minha primeira vez no github!! Eu usarei isso para fazer um Jokenpo-Ino usando A
 Lista de Materias
 - 1 Arduino Uno (Compatível)
 - 1 display OLED IIC/I2C com processador SSD1306
-- 3 Push Button (Botões que em portugues também chamamos push button)
+- 4 Push Button (Botões que em portugues também chamamos push button)
 - 1 Protoboard pequena
 - Pacote com 30 Jumper para protoboard
 - Cabo USB tipo A - B (Aquele da impressora)
