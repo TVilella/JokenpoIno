@@ -1,5 +1,5 @@
-/* Exercício Final de Aula Live 02
- *  Aluno: Thiago Vilella
+/*  Projeto pessoal
+ *  Autor: Thiago Vilella
  *  Link do Curso: https://go.hotmart.com/W8213658G
  *  JokenpoIno Versão: 1.0.0
 */
