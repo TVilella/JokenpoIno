@@ -1,13 +1,14 @@
 /*  Projeto pessoal
  *  Autor: Thiago Vilella
  *  Link do Curso: https://go.hotmart.com/W8213658G
- *  JokenpoIno Versão: 1.0.0
+ *  JokenpoIno Versão: 1.1.0
 */
 
 //Incluindo biblioteca
 #include <Arduino.h>
 #include <Wire.h>
 #include <MicroLCD.h>
+#include "PushButton.h"
 
 //Definindo Pinos
 #define pinBot1 8
@@ -103,58 +104,6 @@ const PROGMEM uint8_t tesoura[48 * 48 / 8] = {
 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
-
-//Definindo classe para pushbutton -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-class PushButton {
-  public:
-    PushButton (byte pinBotao , byte tempoDebounce = 200 );
-    void lerBotao();
-    bool pressed();
-    bool unpressed();
-  private:
-    unsigned long debounceBotao;
-    bool estadoBotaoAnt = HIGH;
-    bool estadoBotao;
-    bool apertado;
-    bool soltado;
-    byte pino;
-    byte tempo;  
-};
-
-//Definindo método construtor para classe PushButton
-PushButton::PushButton (byte pinBotao , byte tempoDebounce){
-  pinMode( pinBotao , INPUT_PULLUP ); //Indicando modo do pino como input usando o resistor de pullup interno
-  debounceBotao = millis();
-  pino = pinBotao;
-  tempo = tempoDebounce;
-}
-
-void PushButton::lerBotao() {
-  estadoBotao = digitalRead(pino);
-  apertado = false;
-  soltado = false;
-
-  if ( ( millis() - debounceBotao ) > tempo ){
-    if (!estadoBotao && estadoBotaoAnt) {
-      apertado = true;
-      debounceBotao = millis();
-    } else if (estadoBotao && !estadoBotaoAnt) {
-      soltado = true;
-      debounceBotao = millis();
-    }
-  }
-  estadoBotaoAnt = estadoBotao;
-}
-
-bool PushButton::pressed(){
-  return apertado;
-}
-
-bool PushButton::unpressed(){
-  return soltado;
-}
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Instanciando objetos
 
