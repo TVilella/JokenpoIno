@@ -1,22 +1,32 @@
-/*  Projeto pessoal
- *  Autor: Thiago Vilella
- *  Link do Curso: https://go.hotmart.com/W8213658G
- *  JokenpoIno Versão: 1.1.0
+/*
+ *  AUTOR:          Thiago Vilella
+ *  YOUTUBE:        https://www.youtube.com/channel/UCpg7_v1Wtvp-XPj-vjh8igQ
+ *  DAILYMOTION:    https://www.dailymotion.com/dm_2f470f25794e41f057a2fba895ff6f3c
+ *  CURSO ARDUINO:  http://bit.ly/2ZhypC9
+ *  CURSO ROBOTICA: http://bit.ly/2zjK9Eo
+ *  COMPRE:         https://www.arducore.com.br/
+ *  SKETCH:         JokenpoIno
+ *  VERSÃO:         1.1.1
+ *  DATA:           22/08/2019
 */
 
-//Incluindo biblioteca
+// INCLUSÃO DE BIBLIOTECAS
 #include <Arduino.h>
 #include <Wire.h>
 #include <MicroLCD.h>
-#include "PushButton.h"
+#include "myPushButton.h" // DOWNLOAD: https://github.com/TVilella/myPushButton
 
-//Definindo Pinos
+// DEFINIÇÕES DE PINOS
 #define pinBot1 8
 #define pinBot2 9
 #define pinBot3 10
 #define pinBot4 11
 
-//String com Icones
+// DEFINIÇÕES
+
+#define DEBUG
+
+// DEFINIÇÕES DE CONSTANTES
 //String com logo do BrincandoComIdeias
 const PROGMEM uint8_t logo[48 * 48 / 8] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xC0, 0xC0, 0xE0, 0xE0,
@@ -105,17 +115,18 @@ const PROGMEM uint8_t tesoura[48 * 48 / 8] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-//Instanciando objetos
-
-PushButton botPedra  (pinBot1);
-PushButton botPapel  (pinBot2);
-PushButton botTesoura(pinBot3);
-PushButton botSelect (pinBot4);
+// INSTANCIANDO OBJETOS
+myPushButton botPedra  (pinBot1);
+myPushButton botPapel  (pinBot2);
+myPushButton botTesoura(pinBot3);
+myPushButton botSelect (pinBot4);
 
 LCD_SSD1306 lcd; 
 
-//Variáveis globais
+// DECLARAÇÃO DE FUNÇÕES
 
+
+// DECLARAÇÃO DE VARIÁVEIS  
 byte contadorMenu = 0;
 byte escolhaJogador1=0;
 byte escolhaJogador2=0;
